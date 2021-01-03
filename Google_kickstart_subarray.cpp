@@ -17,9 +17,7 @@ main()
     {
         cur=a[j]-a[j-1];//current diff
         if(cur==pd)
-        {
             ans++;
-        }
         else
         {
             if(ans>max)
