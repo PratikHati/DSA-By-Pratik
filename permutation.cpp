@@ -33,7 +33,7 @@ int main()
 
     permute(qns,0); //O(n) time complexity
     
-    for(auto y : ans)//No & as only read from ans vector
+    for(auto y : ans)//No & as only read from ans vector=
     {
        for(auto z : y)//No & as only read from ans vector
        {
