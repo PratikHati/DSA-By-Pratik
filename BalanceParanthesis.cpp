@@ -22,7 +22,7 @@ bool isValidParenthesis(string expression)
             if(expression[index]==']' && h != '['){
                 return false;
             }
-            
+            =
             if(expression[index]=='}' && h != '{'){
                 return false;
             }
