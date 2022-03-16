@@ -1,4 +1,3 @@
-#include<stack>
 vector<int> nextSmallerElement(vector<int> &arr, int n)
 {
     // Write your code here.
@@ -9,20 +8,13 @@ vector<int> nextSmallerElement(vector<int> &arr, int n)
 
     
     for(int i=n-1;i>=0;i--){
-    	if(st.top() < arr[i]){
-            ans.push_back(st.top());
-            st.push(arr[i]);
+    	
+      	while(st.top() >= arr[i] ){
+            st.pop();
         }
-        else{
-            while(st.top() >= arr[i] && !st.empty()){
-                st.pop();
-            }
-            ans.push_back(st.top());
-            st.push(arr[i]);
-        }
+        ans.push_back(st.top());
+        st.push(arr[i]);
     }
-    
-    reverse(ans.begin(),ans.end());
-    
+ 	reverse(ans.begin(),ans.end());
     return ans;
 }
